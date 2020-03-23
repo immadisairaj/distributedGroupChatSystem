@@ -17,7 +17,7 @@ public class ChatServer extends UnicastRemoteObject implements ChatServerInterfa
 
     public static void initialize() {
         try{
-            System.setProperty("java.rmi.server.hostname","10.113.9.182");
+            //System.setProperty("java.rmi.server.hostname","10.113.9.182");
             ChatServer server = new ChatServer();
             java.rmi.registry.LocateRegistry.createRegistry(1099);
             Naming.rebind("rmi://localhost:5000/chat", server);
